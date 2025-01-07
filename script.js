@@ -1,19 +1,19 @@
 document.getElementById('searchForm').addEventListener('submit', function (e) {
     e.preventDefault();
   
-    // Get input values and normalize spaces
+    // Normalize the input values
     const studentName = document.getElementById('studentName').value
         .trim()
         .replace(/\s+/g, ' ') // Replace multiple spaces with a single space
-        .toUpperCase();
+        .toLowerCase(); // Convert to lowercase
     const fatherName = document.getElementById('fatherName').value
         .trim()
         .replace(/\s+/g, ' ') // Replace multiple spaces with a single space
-        .toUpperCase();
+        .toLowerCase(); // Convert to lowercase
   
-    // Generate PDF name and path
-    const pdfName = `${studentName} ${fatherName}.pdf`;
-    const pdfPath = `results/${pdfName}`;
+    // Generate the normalized PDF name
+    const pdfName = `${studentName} ${fatherName}.pdf`.toLowerCase();
+    const pdfPath = `results/${encodeURIComponent(pdfName)}`; // Encode spaces and special characters
   
     // Check if the PDF exists
     fetch(pdfPath)
