@@ -15,8 +15,8 @@ document.getElementById('searchForm').addEventListener('submit', async function 
   const encodedName = encodeURIComponent(combinedName); // Encode spaces as %20
 
   // GitHub repository details (replace as needed)
-  const repoOwner = "anonfaded"; // Dynamic username input can replace this
-  const repoName = "result";
+  const repoOwner = "Mukhlisa-collab"; // Dynamic username input can replace this
+  const repoName = "MarkazTuba";
   const folderPath = "results";
 
   const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`;
