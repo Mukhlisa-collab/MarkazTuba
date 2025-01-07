@@ -6,46 +6,97 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #e9ecef; /* Light background to enhance the 3D look */
+}
+
+.container {
+    background: linear-gradient(135deg, #ffffff, #f0f8ff); /* Gradient background for a sleek effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05); /* 3D shadow effect */
     text-align: center;
-  }
-  
-  form {
+    width: 100%;
+    max-width: 450px;
+    transform: translateY(-10px); /* Add a slight floating effect */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.container:hover {
+    transform: translateY(0px); /* Hover effect to bring it back to normal */
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease; /* Logo hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  label {
-    margin-bottom: 5px;
-  }
-  
-  input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 85%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #28a745; /* Green border on focus */
+    outline: none;
+}
+
+button {
+    padding: 14px;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-  }
-  
-  button:hover {
+    width: 85%;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
     background-color: #218838;
-  }
-  
-  #result {
+    transform: translateY(-2px); /* Hover effect on button */
+}
+
+#result {
     margin-top: 20px;
-  }
+}
+
+footer {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
