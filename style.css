@@ -279,3 +279,13 @@ input:focus {
 .animate-in {
   animation: fadeIn 0.5s ease forwards;
 }
+
+.logo {
+  width: 120px;  /* Adjust the width as needed */
+  height: auto;  /* Maintain the aspect ratio */
+  margin-bottom: 20px;  /* Space between the logo and the title */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  /* Center the logo */
+}
+
